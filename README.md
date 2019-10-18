@@ -63,7 +63,7 @@ Here you will find:
 
 * Mongo (WIP)
 * Couch ( coming soon )
-* PostgreSQL ( coming soon )
+* PostgreSQL ( :heavy_check_mark: )
 * Mysql ( coming soon )
 
 ## Others 
