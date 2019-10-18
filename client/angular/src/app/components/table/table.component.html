@@ -1,0 +1,36 @@
+<ng-container>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Código de barras</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Categoria</th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList">
+                <th scope="row">{{product.idProduct}}</th>
+                <td>{{product.barCode}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.category}}</td>
+
+                <td> <button type="button" class="btn btn-default" (click)="editEmmiter.emit( product)">
+                        Editar <span class="icon-bar"></span>
+                    </button></td>
+                <td> <button type="button" class="btn btn-danger" (click)="deleteEmmiter.emit(product)">
+                        Remover <span class="glyphicon glyphicon-trash"></span>
+                    </button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <app-pagination>
+    </app-pagination>
+</ng-container>

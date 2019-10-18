@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "c86d60a3-d449-412c-8c63-f5a26b92622a",
+		"name": "STOCK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{API}/products",
+					"host": [
+						"{API}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{API}}/products/1",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n      \"id\": 4,\n      \"bar_code\": \"11\",\n      \"name\": \"p4\",\n      \"description\": \"tcom\",\n      \"quantity\": 1,\n      \"category\": \"C\"\n}"
+				},
+				"url": {
+					"raw": "{{API}}/products",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t  \"id\": 1,\n      \"bar_code\": \"aaa\",\n      \"name\": \"p1\",\n      \"description\": \"tom\",\n      \"quantity\": 0,\n      \"category\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "{{API}}/products/1",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{API}}/products/1",
+					"host": [
+						"{{API}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c30afaf2-a194-4e9e-bc1d-cedbf731188e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "dd505f8a-9d91-4d61-90af-eea0bb24a6ca",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "fecd7786-e9b9-441a-93dc-c5553b7b6dcd",
+			"key": "API",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

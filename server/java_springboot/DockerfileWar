@@ -1,0 +1,7 @@
+FROM tomcat:8.0
+
+
+COPY build/libs/stock-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/stock.war
+
+
+EXPOSE 8080

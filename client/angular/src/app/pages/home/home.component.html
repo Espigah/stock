@@ -1,0 +1,38 @@
+<div class="home-page container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="banner">
+            </div>
+
+            <div class="header">
+                <strong class="h2">
+                    Listagem de produtos
+                </strong>
+                <button type="button" class="btn btn-success float-right w-20" (click)="onCreate()">+</button>
+            </div>
+
+            <app-alert></app-alert>
+
+            <div class="content">
+                <blockquote class="blockquote text-center" *ngIf="!productList.length">
+                    <p class="mb-0">
+                        Não há produtos cadastrados.
+                    </p>
+                </blockquote>
+
+
+                <app-modal-confirmation [open]="modalConfirmationOpen" (open)="modalConfirmationOpen = $event"
+                    (close)="onModelConfirmationClose($event)">
+                </app-modal-confirmation>
+
+                <app-modal-form [product]="product" (submit)="onFormSubmit($event)" [state]="modalFormState"
+                    (state)="modalFormState = $event"></app-modal-form>
+
+                <app-table [productList]="productList" (onEdit)="onEdit($event)" (onDelete)="onDelete($event)"
+                    *ngIf="productList.length"></app-table>
+
+
+            </div>
+        </div>
+    </div>
+</div>

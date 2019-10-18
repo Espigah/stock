@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "idProduct": 1,
+      "barCode": 11,
+      "name": "p1",
+      "description": "tom",
+      "quantity": 0,
+      "category": "A"
+    },
+    {
+      "idProduct": 2,
+      "barCode": 22,
+      "name": "p2",
+      "description": "tony@mcu.com",
+      "quantity": 22,
+      "category": "B"
+    },
+    {
+      "idProduct": 3,
+      "barCode": 33,
+      "name": "p3",
+      "description": "tony@mcu.com",
+      "quantity": 1,
+      "category": "C"
+    }
+  ]
+}
