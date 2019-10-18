@@ -6,139 +6,489 @@
 	},
 	"item": [
 		{
-			"name": "ping",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+			"name": "JSON_SERVER",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JSON}}/products/",
+							"host": [
+								"{{JSON}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080"
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JSON}}/products/1",
+							"host": [
+								"{{JSON}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n      \"barCode\": 11,\n      \"name\": \"p4\",\n      \"description\": \"tcom\",\n      \"quantity\": 1,\n      \"category\": \"C\"\n}"
+						},
+						"url": {
+							"raw": "{{JSON}}/products/",
+							"host": [
+								"{{JSON}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t  \"id\": 1,\n      \"barCode\": 1,\n      \"name\": \"p1\",\n      \"description\": \"tom\",\n      \"quantity\": 0,\n      \"category\": \"A\"\n}"
+						},
+						"url": {
+							"raw": "{{JSON}}/products/1",
+							"host": [
+								"{{JSON}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JSON}}",
+							"host": [
+								"{{JSON}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JSON}}/products/1",
+							"host": [
+								"{{JSON}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "getProducts",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+			"name": "NODE_SERVER",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{NODE}}/products/",
+							"host": [
+								"{{NODE}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{API}/products",
-					"host": [
-						"{API}"
-					],
-					"path": [
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getProduct",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{NODE}}/products/1",
+							"host": [
+								"{{NODE}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{API}}/products/1",
-					"host": [
-						"{{API}}"
-					],
-					"path": [
-						"products",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "createProduct",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": " {\n      \"id\": 4,\n      \"bar_code\": \"11\",\n      \"name\": \"p4\",\n      \"description\": \"tcom\",\n      \"quantity\": 1,\n      \"category\": \"C\"\n}"
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n      \"barCode\": 11,\n      \"name\": \"p4\",\n      \"description\": \"tcom\",\n      \"quantity\": 1,\n      \"category\": \"C\"\n}"
+						},
+						"url": {
+							"raw": "{{NODE}}/products/",
+							"host": [
+								"{{NODE}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{API}}/products",
-					"host": [
-						"{{API}}"
-					],
-					"path": [
-						"products"
-					]
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t  \"id\": 1,\n      \"barCode\": 1,\n      \"name\": \"p1\",\n      \"description\": \"tom\",\n      \"quantity\": 0,\n      \"category\": \"A\"\n}"
+						},
+						"url": {
+							"raw": "{{NODE}}/products/1",
+							"host": [
+								"{{NODE}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{NODE}}",
+							"host": [
+								"{{NODE}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{NODE}}/products/1",
+							"host": [
+								"{{NODE}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "updateProduct",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4ecbcc2f-9f56-4375-8acf-edd2595ddc3a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t  \"id\": 1,\n      \"bar_code\": \"aaa\",\n      \"name\": \"p1\",\n      \"description\": \"tom\",\n      \"quantity\": 0,\n      \"category\": \"A\"\n}"
 				},
-				"url": {
-					"raw": "{{API}}/products/1",
-					"host": [
-						"{{API}}"
-					],
-					"path": [
-						"products",
-						"1"
-					]
+				{
+					"listen": "test",
+					"script": {
+						"id": "2d037687-c01d-4c19-9f7f-25339ea95f09",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "deleteProduct",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+			"name": "JAVA_SERVER",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JAVA}}/products/",
+							"host": [
+								"{{JAVA}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{API}}/products/1",
-					"host": [
-						"{{API}}"
-					],
-					"path": [
-						"products",
-						"1"
-					]
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JAVA}}/products/1",
+							"host": [
+								"{{JAVA}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n      \"barCode\": 11,\n      \"name\": \"p4\",\n      \"description\": \"tcom\",\n      \"quantity\": 1,\n      \"category\": \"C\"\n}"
+						},
+						"url": {
+							"raw": "{{JAVA}}/products/",
+							"host": [
+								"{{JAVA}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"barCode\": 2,\n      \"name\": \"p1\",\n      \"description\": \"tom\",\n      \"quantity\": 0,\n      \"category\": \"A\"\n}"
+						},
+						"url": {
+							"raw": "{{JAVA}}/products/1",
+							"host": [
+								"{{JAVA}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JAVA}}",
+							"host": [
+								"{{JAVA}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{JAVA}}/products/1",
+							"host": [
+								"{{JAVA}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b39e18db-54c5-4b1e-b438-a4d59fe58237",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bbe50e9-1083-454e-a260-3a3b322b36a5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		}
 	],
 	"event": [
@@ -165,8 +515,14 @@
 	],
 	"variable": [
 		{
-			"id": "fecd7786-e9b9-441a-93dc-c5553b7b6dcd",
-			"key": "API",
+			"id": "9e662534-e651-4310-9245-94d270dd57f5",
+			"key": "JSON",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "319cefcf-a897-4bb3-a709-0e3296679ec2",
+			"key": "JAVA",
 			"value": "",
 			"type": "string"
 		}
