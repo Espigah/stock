@@ -7,7 +7,7 @@ Create a minimal app with different technologies
 * <strong>C</strong>reate products
 * <strong>R</strong>ead products
 * <strong>U</strong>pdate products
-* <strong>D</strong>reate products
+* <strong>D</strong>elete products
 * Show products details
 * Sale prodcuts
 
@@ -17,13 +17,13 @@ Create a minimal app with different technologies
 * [Node](https://nodejs.org/en/download/)
 * [Docker](https://docs.docker.com/docker-for-windows/install/)
 
-# Runing
+# Running
 
 ## Create database
 
     $ cd /db/postgres
     $ docker build -t products-postgres-db .
-    $ docker run -it -p 5432:5432 products-postgres-db
+    $ docker run -d -p 5432:5432 products-postgres-db
 
 ## Start server
 
