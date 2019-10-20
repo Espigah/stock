@@ -50,6 +50,10 @@ Here you will find:
 * React ( coming soon )
 * Vue ( coming soon )
 * Flutter ( coming soon )
+* Elm ( coming soon )
+* Unity C# ( coming soon )
+* Godot ( coming soon )
+* Haxe ( coming soon )
 
 ## Server (`/server`)
 
@@ -58,6 +62,7 @@ Here you will find:
 * NodeJs Express ( WIP )
 * NodeJs Kha ( coming soon )
 * Python Flask  ( coming soon )
+* GoLang ( coming soon )
 
 ## Database (`/db`)
 
@@ -95,14 +100,25 @@ The project structure based on features.
 
 ![architecture](docs/Architecture.jpg)
 
+(without Redux)
+
 ## ERM
 
 ![erm](docs/Product.vpd.jpg)
 
 ## Topology
 
-![topology](docs/Topology.jpg)
+v1
 
+![topology_v1](docs/Topology.jpg)
+
+v2
+
+![topology_v2](docs/Topology_v2.jpg)
+
+Where I want to get to
+
+![topology_where_i_want_to_get_to](docs/Topology_v3.jpg)
 
 # Toolchain Links
 
