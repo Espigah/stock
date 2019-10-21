@@ -1,4 +1,4 @@
-<ng-container>
+<div>
     <table class="table">
         <thead>
             <tr>
@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of productList">
+            <tr ng-repeat="product in $ctrl.productList track by $index">
                 <th scope="row">{{product.idProduct}}</th>
                 <td>{{product.barCode}}</td>
                 <td>{{product.name}}</td>
@@ -21,16 +21,20 @@
                 <td>{{product.quantity}}</td>
                 <td>{{product.category}}</td>
 
-                <td> <button type="button" class="btn btn-default" (click)="editEmmiter.emit( product)">
+                <td>
+                    <button type="button" class="btn btn-default" ng-click="$ctrl.onEdit({product:product})">
                         Editar <span class="icon-bar"></span>
-                    </button></td>
-                <td> <button type="button" class="btn btn-danger" (click)="deleteEmmiter.emit(product)">
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" ng-click="$ctrl.onDelete({product:product})">
                         Remover <span class="glyphicon glyphicon-trash"></span>
-                    </button></td>
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>
 
     <app-pagination>
     </app-pagination>
-</ng-container>
+</div>

@@ -1,25 +1,26 @@
 (function (angular) {
-  "use strict"
+  "use strict";
 
   var component = {
-    templateUrl:"src/app/components/table/table.component.html",
-    bindings: {      
+    templateUrl: "src/app/components/table/table.component.html",
+    controller: TableComponentController,
+    bindings: {
       productList: '<',
-      onEdit:  "&",
-      onDelete:  "&"
-    },
-    controller: TableComponentController
-  }
+      onEdit: "&",
+      onDelete: "&"
+    }
+  };
 
 
   TableComponentController.$inject = [];
 
   function TableComponentController() {
-    debugger
+    var $ctrl = this;  
+
   }
 
   angular.module('TableComponentModule')
-    .component('appTable', component)
+    .component('appTable', component);
 
 
 })(angular);
