@@ -11,13 +11,8 @@
 angular
   .module('loginNRoutersApp')
   .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'src/login/login.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
+    $routeProvider     
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   });

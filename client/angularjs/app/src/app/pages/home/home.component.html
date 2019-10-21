@@ -1,0 +1,30 @@
+<div class="home-page container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="home-page__banner">
+            </div>
+
+            <div class="home-page__header">
+                <strong class="h2">
+                    Listagem de produtos
+                </strong>
+                <button type="button" class="btn btn-success float-right w-20" (click)="onCreate()">+</button>
+            </div>
+
+            <app-alert></app-alert>
+
+            <div class="content">
+                <blockquote class="blockquote text-center" *ngIf="!productList.length">
+                    <p class="mb-0">
+                        Não há produtos cadastrados.
+                    </p>
+                </blockquote>
+
+                <app-table product-list="productList" on-edit="onEdit($event)" on-delete="onDelete($event)"
+                ng-if="productList.length"></app-table>
+           
+
+            </div>
+        </div>
+    </div>
+</div>

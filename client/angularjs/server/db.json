@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "barCode": 11,
+      "name": "bb",
+      "description": "tom",
+      "quantity": 0,
+      "category": "A",
+      "saveLatency": 155
+    },
+    {
+      "barCode": 33,
+      "name": "novo",
+      "description": "tony@mcu.com",
+      "quantity": 1,
+      "category": "C",
+      "id": 2
+    },
+    {
+      "barCode": 33,
+      "name": "novo",
+      "description": "tony@mcu.com",
+      "quantity": 1,
+      "category": "C",
+      "id": 3
+    }
+  ]
+}
