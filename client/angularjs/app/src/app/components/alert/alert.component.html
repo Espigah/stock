@@ -1,0 +1,5 @@
+<div [@visibilityChanged]="visiblityState" *ngIf="message" class="alert-component">
+    <div class="alert " role="alert" [ngClass]="{'alert-success': !hasError, 'alert-danger': hasError}">
+       {{message}}
+    </div> 
+</div>
