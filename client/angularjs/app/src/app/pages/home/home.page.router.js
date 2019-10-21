@@ -6,7 +6,7 @@
         .when('/home', {
           templateUrl: 'src/app/pages/home/home.component.html',
           controller: 'HomePageController',
-          controllerAs: 'vm'
+          controllerAs: '$ctrl'
         });
     });
 

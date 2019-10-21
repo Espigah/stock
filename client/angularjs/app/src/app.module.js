@@ -10,8 +10,15 @@ var thirpartyModules = [
 ];
 
 var appModules = [
-  'HomePageModule'
+  'HomePageModule',
+  'AlertComponentModule',
+  'FormComponentModule',
+  'ModalConfirmationComponentModule',
+  'ModalFormComponentModule',
+  'PaginationComponentModule',
+  'TableComponentModule'
 ];
+
 
 var appServices = [
   'ApiProductsModule'

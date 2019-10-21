@@ -39,12 +39,9 @@
 </head>
 
 <body ng-app="loginNRoutersApp">
-  <div class="container">
+  <div class="">
     <div ng-view=""></div>
   </div>
-
-
-
 
 
   <!-- build:js({.tmp,app}) scripts.js -->
@@ -70,6 +67,21 @@
   <!-- ---------- -->
   <!-- COMPONENTS -->
   <!-- ---------- -->
+  <script src="src/app/components/alert/alert.component.module.js"></script>
+  <script src="src/app/components/alert/alert.component.js"></script>
+
+  <script src="src/app/components/form/form.component.module.js"></script>
+  <script src="src/app/components/form/form.component.js"></script>
+
+  <script src="src/app/components/modal-confirmation/modal-confirmation.component.module.js"></script>
+  <script src="src/app/components/modal-confirmation/modal-confirmation.component.js"></script>
+
+  <script src="src/app/components/modal-form/modal-form.component.module.js"></script>
+  <script src="src/app/components/modal-form/modal-form.component.js"></script> 
+
+  <script src="src/app/components/pagination/pagination.component.module.js"></script>
+  <script src="src/app/components/pagination/pagination.component.js"></script>
+
   <script src="src/app/components/table/table.component.module.js"></script>
   <script src="src/app/components/table/table.component.js"></script>
   
@@ -82,6 +94,7 @@
   <!-- endbuild -->
 
   <!-- build:css(.tmp) main.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/app.css">
   <!-- endbuild -->
 

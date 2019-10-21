@@ -6,20 +6,27 @@
   HomePageController.$inject = ['HomePageService'];
 
   function HomePageController(HomePageService) {
-    debugger
-    HomePageService.createProduct( {
-      "barCode": 33,
-      "name": "novo",
-      "description": "tony@mcu.com",
-      "quantity": 1,
-      "category": "C"
-    }).then(function(data){
-      debugger
-    })
-  
+    var $ctrl = this;
+
+    $ctrl.onEdit = onEdit;
+    $ctrl.onDelete = onDelete;
+
+    HomePageService.getProducts()
+      .then(function (productList) {
+        $ctrl.productList = productList;
+      })
+
+
+      function onDelete(params) {
+        debugger
+      }
+
+      function onEdit(params) {
+        debugger
+      }
+
 
   }
 
 
 })(angular);
-

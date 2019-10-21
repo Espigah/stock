@@ -8,20 +8,19 @@
                 <strong class="h2">
                     Listagem de produtos
                 </strong>
-                <button type="button" class="btn btn-success float-right w-20" (click)="onCreate()">+</button>
+                <button type="button" class="btn btn-success float-right w-20" ng-click="onCreate()">+</button>
             </div>
 
             <app-alert></app-alert>
 
             <div class="content">
-                <blockquote class="blockquote text-center" *ngIf="!productList.length">
+                <blockquote class="blockquote text-center" ng-if="!$ctrl.productList.length">
                     <p class="mb-0">
                         Não há produtos cadastrados.
                     </p>
                 </blockquote>
-
-                <app-table product-list="productList" on-edit="onEdit($event)" on-delete="onDelete($event)"
-                ng-if="productList.length"></app-table>
+                <app-table product-list="$ctrl.productList" on-edit="$ctrl.onEdit(product)" on-delete="$ctrl.onDelete(product)"
+                ng-if="$ctrl.productList.length"></app-table>
            
 
             </div>
