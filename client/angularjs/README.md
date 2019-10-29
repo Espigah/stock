@@ -43,11 +43,11 @@ Running `npm run e2e` will run the unit tests with protractor.
 
 # Toolchain
 
-- [angulajs (vanilla)]:https://angularjs.org/
-- [yeoman]:https://yeoman.io/
-- [protractor]:http://www.protractortest.org/#/
-- [karma]:https://karma-runner.github.io/latest/index.html
-- [gulp@3.n]:https://gulpjs.com/
-- [sass]:https://sass-lang.com/
-- [bootstrap]:https://getbootstrap.com/docs/3.3/
-- [docker]:https://www.docker.com/
+- [angulajs (vanilla)](https://angularjs.org/)
+- [yeoman](https://yeoman.io/)
+- [protractor](http://www.protractortest.org/#/)
+- [karma](https://karma-runner.github.io/latest/index.html)
+- [gulp@3.n](https://gulpjs.com/)
+- [sass](https://sass-lang.com/)
+- [bootstrap](https://getbootstrap.com/docs/3.3/)
+- [docker](https://www.docker.com/)
