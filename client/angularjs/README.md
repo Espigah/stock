@@ -1,4 +1,4 @@
-# login-n-routers
+# Project
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.16.0.
@@ -20,15 +20,26 @@ Running `npm test` will run the unit tests with karma.
 
 Running `npm run e2e` will run the unit tests with protractor.
 
-# Purpose
 
-Create a minimal app with angularjs 
+# Progress (~60%)
 
-# Organising
+* Create components: (6/7)
+* * HomePage ( heavy_check_mark )
+* * Alert
+* * Form ( heavy_check_mark )
+* * ModalConfirmation ( heavy_check_mark )
+* * ModalForm ( heavy_check_mark )
+* * Pagination ( heavy_check_mark )
+* * Tabel ( heavy_check_mark )
+* CRUD: (1/4)
+* * Create
+* * Read ( heavy_check_mark )
+* * Update
+* * Delete  
+* Tests:
+* Coverage: 
 
-The project structure based on features.
 
-@see https://www.freecodecamp.org/news/how-to-structure-your-project-and-manage-static-resources-in-react-native-6f4cfc947d92/
 
 # Toolchain
 
