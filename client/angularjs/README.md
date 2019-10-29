@@ -24,16 +24,16 @@ Running `npm run e2e` will run the unit tests with protractor.
 # Progress (~60%)
 
 * Create components: (6/7)
-* * HomePage ( heavy_check_mark )
+* * HomePage ( :heavy_check_mark: )
 * * Alert
-* * Form ( heavy_check_mark )
-* * ModalConfirmation ( heavy_check_mark )
-* * ModalForm ( heavy_check_mark )
-* * Pagination ( heavy_check_mark )
-* * Tabel ( heavy_check_mark )
+* * Form ( :heavy_check_mark: )
+* * ModalConfirmation ( :heavy_check_mark: )
+* * ModalForm ( :heavy_check_mark: )
+* * Pagination ( :heavy_check_mark: )
+* * Tabel ( :heavy_check_mark: )
 * CRUD: (1/4)
 * * Create
-* * Read ( heavy_check_mark )
+* * Read ( :heavy_check_mark: )
 * * Update
 * * Delete  
 * Tests:
