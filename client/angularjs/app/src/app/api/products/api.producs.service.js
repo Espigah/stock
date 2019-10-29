@@ -20,12 +20,22 @@
 
     return instance;
 
-    function create(params) {
+    function create() {
       return ApiService.create('/products/:id');
     }
 
     function getProducts() {
-      return productResource.query().$promise;
+      return productResource.query().$promise.then(normalizeId);
+    }
+
+    /**
+     * From json-serve idProduct does not exist
+     * @param {*} productList 
+     */
+    function normalizeId(productList){
+      return productList.map(function(data){
+        return angular.merge({idProduct: data.idProduct || data.id},data);
+      });
     }
 
     // HttpClient API get() method => Fetch product
@@ -38,17 +48,17 @@
 
     // HttpClient API post() method => Create product
     function createProduct(product) {
-      return productResource.post(product);
+      return productResource.post(product).$promise;
     }
 
     // HttpClient API put() method => Update product
     function updateProduct(product) {
-      return productResource.put(product);
+      return productResource.put(product).$promise;
     }
 
     // HttpClient API delete() method => Delete product
     function deleteProduct(product) {
-      return productResource.delete(product);
+      return productResource.delete(product).$promise;
     }
 
     function save(product) {

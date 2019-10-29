@@ -8,7 +8,7 @@
                 <strong class="h2">
                     Listagem de produtos
                 </strong>
-                <button type="button" class="btn btn-success float-right w-20" ng-click="onCreate()">+</button>
+                <button type="button" class="btn btn-success float-right w-20" ng-click="$ctrl.onCreate()">+</button>
             </div>
 
             <app-alert></app-alert>
@@ -19,9 +19,17 @@
                         Não há produtos cadastrados.
                     </p>
                 </blockquote>
-                <app-table product-list="$ctrl.productList" on-edit="$ctrl.onEdit(product)" on-delete="$ctrl.onDelete(product)"
-                ng-if="$ctrl.productList.length"></app-table>
-           
+
+
+                <app-modal-confirmation close="$ctrl.onModelConfirmationClose({answer})">
+                </app-modal-confirmation>
+
+                <app-modal-form product="$ctrl.product" submit="$ctrl.onFormSubmit({product})"
+                    state="{{$ctrl.modalFormState}}"></app-modal-form>
+
+                <app-table product-list="$ctrl.productList" on-edit="$ctrl.onEdit(product)"
+                    on-delete="$ctrl.onDelete(product)" ng-if="$ctrl.productList.length"></app-table>
+
 
             </div>
         </div>

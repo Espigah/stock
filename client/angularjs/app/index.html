@@ -14,7 +14,7 @@
 
   <script src="bower_components/angular/angular.js"></script>
 
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <script src="bower_components/angular-animate/angular-animate.js"></script>
 
@@ -47,6 +47,7 @@
   <!-- build:js({.tmp,app}) scripts.js -->
   <script src="src/app.module.js"></script>
   <script src="src/app.routers.js"></script>
+ 
   <!-- ----- -->
   <!-- PAGES -->
   <!-- ----- -->
@@ -75,9 +76,12 @@
 
   <script src="src/app/components/modal-confirmation/modal-confirmation.component.module.js"></script>
   <script src="src/app/components/modal-confirmation/modal-confirmation.component.js"></script>
+  <script src="src/app/components/modal-confirmation/modal-confirmation.service.js"></script>
 
   <script src="src/app/components/modal-form/modal-form.component.module.js"></script>
-  <script src="src/app/components/modal-form/modal-form.component.js"></script> 
+  <script src="src/app/components/modal-form/modal-form.constant.js"></script> 
+  <script src="src/app/components/modal-form/modal-form.component.js"></script>
+  <script src="src/app/components/modal-form/modal-form.service.js"></script>
 
   <script src="src/app/components/pagination/pagination.component.module.js"></script>
   <script src="src/app/components/pagination/pagination.component.js"></script>
@@ -85,6 +89,10 @@
   <script src="src/app/components/table/table.component.module.js"></script>
   <script src="src/app/components/table/table.component.js"></script>
   
+  <!-- ---------- -->
+  <!--            -->
+  <!-- ---------- -->
+  <script src="src/app/shared/modal.service.js"></script>
 
   <!-- endbuild -->
 
@@ -94,10 +102,16 @@
   <!-- endbuild -->
 
   <!-- build:css(.tmp) main.css -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="styles/app/components/form/form.component.css">
+  <link rel="stylesheet" href="styles/app/components/modal-confirmation/modal-confirmation.component.css">
+  <link rel="stylesheet" href="styles/app/components/modal-form/modal-form.component.css">
+  <link rel="stylesheet" href="styles/app/components/pagination/pagination.component.css">
+  <link rel="stylesheet" href="styles/app/components/table/table.component.css">
+  <link rel="stylesheet" href="styles/app/pages/home/home.component.css">
   <!-- endbuild -->
-
+ 
 </body>
 
 </html>

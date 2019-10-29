@@ -16,7 +16,8 @@ var appModules = [
   'ModalConfirmationComponentModule',
   'ModalFormComponentModule',
   'PaginationComponentModule',
-  'TableComponentModule'
+  'TableComponentModule',
+  'ModalService'
 ];
 
 

@@ -5,6 +5,7 @@
     templateUrl: "src/app/components/form/form.component.html",
     controller: FormComponentController,
     bindings: {
+      product: "<"
     }
   };
 
