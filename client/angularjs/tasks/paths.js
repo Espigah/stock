@@ -7,6 +7,7 @@ var appSource = path.join(yeoman.app, 'src');
 var appScripts = [
   appSource + '/app.module.js',
   appSource + '/app.routers.js',
+  appSource + '/**/*.module.js',
   appSource + '/**/*.js'
 ]
 

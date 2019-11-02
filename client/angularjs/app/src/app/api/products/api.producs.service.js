@@ -32,9 +32,11 @@
      * From json-serve idProduct does not exist
      * @param {*} productList 
      */
-    function normalizeId(productList){
-      return productList.map(function(data){
-        return angular.merge({idProduct: data.idProduct || data.id},data);
+    function normalizeId(productList) {
+      return productList.map(function (data) {
+        return angular.merge({
+          idProduct: data.idProduct || data.id
+        }, data);
       });
     }
 
@@ -52,13 +54,15 @@
     }
 
     // HttpClient API put() method => Update product
-    function updateProduct(product) {
+    function updateProduct(idProduct, product) {
       return productResource.put(product).$promise;
     }
 
     // HttpClient API delete() method => Delete product
-    function deleteProduct(product) {
-      return productResource.delete(product).$promise;
+    function deleteProduct(idProdcut) {
+      return productResource.delete({
+        id: idProdcut
+      }).$promise;
     }
 
     function save(product) {

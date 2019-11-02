@@ -17,7 +17,8 @@ var appModules = [
   'ModalFormComponentModule',
   'PaginationComponentModule',
   'TableComponentModule',
-  'ModalService'
+  'ModalService',
+  'TimeoutService'
 ];
 
 

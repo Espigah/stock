@@ -3,9 +3,9 @@
   angular.module('HomePageModule')
     .controller('HomePageController', HomePageController);
 
-  HomePageController.$inject = ['HomePageService'];
+  HomePageController.$inject = ['HomePageService', 'TimeoutService'];
 
-  function HomePageController(HomePageService) {
+  function HomePageController(HomePageService, TimeoutService) {
     var $ctrl = this;
 
     $ctrl.onEdit = onEdit;
@@ -13,7 +13,7 @@
     $ctrl.onCreate = onCreate;
     $ctrl.onFormSubmit = onFormSubmit;
     $ctrl.onModelConfirmationClose = onModelConfirmationClose;
-    $ctrl.ModalFormState = HomePageService.ModalFormState.CLOSE;
+    $ctrl.modalFormState = HomePageService.ModalFormState.CLOSE;
     $ctrl.product;
 
     setup();
@@ -32,7 +32,7 @@
     //________________________________
     //MODAL STATE
     //________________________________
-    function openModalForm(state) {
+    function updateModalFormState(state) {
       $ctrl.modalFormState = state || HomePageService.ModalFormState.EDIT;
       HomePageService.showModalForm();
     }
@@ -54,12 +54,12 @@
 
     function onEdit(product) {
       setProduct(product);
-      openModalForm();
+      updateModalFormState(HomePageService.ModalFormState.EDIT);
     }
 
     function onCreate() {
       setProduct({});
-      openModalForm(HomePageService.ModalFormState.CREATE);
+      updateModalFormState(HomePageService.ModalFormState.CREATE);
     }
 
     //________________________________
@@ -70,8 +70,8 @@
       HomePageService.upsertProduct(product, $ctrl.modalFormState)
         .then(function (data) {
           $ctrl.productList = HomePageService.pushProduct($ctrl.productList, data);
-          openModalForm(HomePageService.ModalFormState.CLOSE);
-          //alertService.success("Editado!");
+          updateModalFormState(HomePageService.ModalFormState.CLOSE);
+          showAlert("Editado!");
         });
     }
 
@@ -83,14 +83,14 @@
       }
 
       HomePageService.deleteProduct($ctrl.product)
-        .then(data => {
+        .then(function (data)  {
           $ctrl.productList = HomePageService.popProduct($ctrl.productList, $ctrl.product);
           hideModalConfirmation();
-          //this.alertService.success("Removido!");
-        }, (err) => {
+          showAlert("Removido!");
+        }, function (err) {
           hideModalConfirmation();
-          //this.alertService.error("Erro ao tentar remover um produto!");
-        })
+          showAlert("Erro ao tentar remover um produto!", true);
+        });
 
     }
     //________________________________
@@ -98,6 +98,17 @@
     //________________________________
     function setProduct(product) {
       $ctrl.product = angular.copy(product);
+    }
+
+    //________________________________
+    //alert 
+    //________________________________
+    function showAlert(message, error) {
+      $ctrl.message = message;
+      $ctrl.hasError = error;
+      TimeoutService('showAlert', function () {
+        showAlert(null)
+      }, 3000)
     }
 
   }

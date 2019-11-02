@@ -5,6 +5,8 @@
     templateUrl: "src/app/components/alert/alert.component.html",
     controller: AlertComponentController,
     bindings: {
+      message: "<",
+      hasError : "<"
     }
   };
 
@@ -13,7 +15,6 @@
 
   function AlertComponentController() {
     var $ctrl = this;  
-
   }
 
   angular.module('AlertComponentModule')

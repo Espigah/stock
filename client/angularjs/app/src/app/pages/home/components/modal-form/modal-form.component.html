@@ -1,0 +1,26 @@
+<div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="ModelCentredTitle"
+    data-backdrop="static" data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModelCentredTitle">Cadastrar</h5>
+                <button type="button" class="close" aria-label="Fechar" ng-click="$ctrl.close()">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <form novalidate class="col-xs-8 modal-form" ng-if="$ctrl.product" name="$ctrl.productForm"
+                ng-submit="$ctrl.save($ctrl.product)">
+
+                <div class="modal-body">
+
+
+                    <app-form product="$ctrl.product"></app-form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="submit" value="Submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

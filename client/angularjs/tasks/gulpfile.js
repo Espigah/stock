@@ -167,8 +167,8 @@ gulp.task('clean:dist', function (cb) {
 });
 
 gulp.task('client:build', ['html', 'styles'], function () {
-  var jsFilter = $.filter('**/*.js');
-  var cssFilter = $.filter('**/*.css');
+  var jsFilter = $.filter('../app/**/*.js');
+  var cssFilter = $.filter('../**/*.css');
 
   return gulp.src(paths.views.main)
     .pipe($.useref({

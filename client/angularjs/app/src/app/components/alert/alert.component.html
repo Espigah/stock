@@ -1,5 +1,6 @@
-<div [@visibilityChanged]="visiblityState" *ngIf="message" class="alert-component">
-    <div class="alert " role="alert" [ngClass]="{'alert-success': !hasError, 'alert-danger': hasError}">
-       {{message}}
+<div  ng-if="$ctrl.message" class="alert-component">
+    <div class="alert " role="alert" ng-class="{'alert-success': !$ctrl.hasError, 'alert-danger': $ctrl.hasError}">
+       {{$ctrl.message}}
     </div> 
 </div>
+

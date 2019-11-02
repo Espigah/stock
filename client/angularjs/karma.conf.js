@@ -18,7 +18,7 @@ module.exports = function (config) {
     files: [],
     exclude: ["node_modules", "bower_components"],
     preprocessors: {
-      '**/*.js': 'coverage'
+      'app/**/*.js': 'coverage'
     },
     reporters: ["progress", "kjhtml", "coverage", "spec"],
     coverageReporter: {

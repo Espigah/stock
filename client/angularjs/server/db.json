@@ -1,29 +1,44 @@
 {
   "products": [
     {
-      "id": 1,
-      "barCode": 11,
-      "name": "bb",
-      "description": "tom",
-      "quantity": 0,
-      "category": "A",
-      "saveLatency": 155
-    },
-    {
-      "barCode": 33,
-      "name": "novo",
-      "description": "tony@mcu.com",
-      "quantity": 1,
-      "category": "C",
-      "id": 2
-    },
-    {
       "barCode": 33,
       "name": "novo",
       "description": "tony@mcu.com",
       "quantity": 1,
       "category": "C",
       "id": 3
+    },
+    {
+      "barCode": "2312323",
+      "name": "asd",
+      "description": "asd",
+      "quantity": 2,
+      "category": "category",
+      "id": 4
+    },
+    {
+      "barCode": "asd",
+      "name": "asd",
+      "description": "asd",
+      "quantity": 2,
+      "category": "asd",
+      "id": 15
+    },
+    {
+      "barCode": "sad",
+      "name": "asd",
+      "description": "asd",
+      "quantity": 23,
+      "category": "sad",
+      "id": 16
+    },
+    {
+      "barCode": "asd",
+      "name": "asd",
+      "description": "asd",
+      "category": "sad",
+      "quantity": 23,
+      "id": 17
     }
   ]
 }

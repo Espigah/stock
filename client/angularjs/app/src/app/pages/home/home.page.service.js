@@ -1,7 +1,7 @@
 (function (angular) {
   "use strict";
   angular.module('HomePageModule')
-    .factory('HomePageService', HomePageService)
+    .factory('HomePageService', HomePageService);
 
   HomePageService.$inject = [
     'ApiProductsService',
@@ -43,11 +43,8 @@
       switch (modalFormState) {
         case ModalFormState.CREATE:
           return ApiProductsService.createProduct(product);
-          break;
         case ModalFormState.EDIT:
           return ApiProductsService.updateProduct(product.idProduct, product);
-          break;
-
         default:
           break;
       }
@@ -56,11 +53,11 @@
 
     function pushProduct(products, newProduct) {
 
-      let newList = products
-        .filter((product) => {
+      var newList = products
+        .filter(function (product) {
           return product.idProduct !== newProduct.idProduct //remove if exist
         })
-        .concat([newProduct])
+        .concat([newProduct]) //add or re-add at the end of the line
 
       return newList;
 
@@ -68,7 +65,7 @@
 
 
     function popProduct(products, oldProduct) {
-      return products.filter((product) => {
+      return products.filter(function (product) {
         return product.idProduct !== oldProduct.idProduct;
       })
     }

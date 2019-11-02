@@ -16,7 +16,7 @@
 
 
     function attach(id) {
-      let $element = $(id);
+      var $element = $(id);
       return {
         show: function (open)  {
           if(open === undefined){
