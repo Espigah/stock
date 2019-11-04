@@ -1,39 +1,70 @@
-import productCreateAdpter from './bo/product.adapter';
+import {
+    exec,
+    adapters
+} from '../utils/execAdapterAction'
 
 const create = (req, res) => {
-    if (!req.body.content) {
+    if (!req.body) {
         return res.status(400).send({
-            message: "Note content can not be empty"
+            message: "Content can not be empty"
         });
     }
-    
-    productCreateAdpter.factory().createBO(req.body.title, req.body.content)
+
+    console.log(">>>",adapters,exec)
+
+    adapters((productAdapter) => {
+            return exec(
+                productAdapter.adapter,
+                productAdapter.create,
+                req.body
+            )
+        })
         .then(data => {
             res.send(data);
-        }).catch(err => {
+        })
+        .catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while creating the Note."
             });
         });
+
 }
 
+
+
+
 const findAll = (req, res) => {
-    productCreateAdpter.factory().findAll();
-    res.send('Birds home page');
+    console.log("[ controller::findAll ]")
+    adapters((productAdapter) => {
+            return exec(
+                productAdapter.adapter,
+                productAdapter.findAll
+            )
+        })
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while creating the Note.",
+                err:err
+            });
+        });
+
 }
 
 const findOne = (req, res) => {
-    productCreateAdpter.factory().findOne();
+    productFactory().findOne();
     res.send('Birds home page');
 }
 
 const update = (req, res) => {
-    productCreateAdpter.factory().update();
+    productFactory().update();
     res.send('Birds home page');
 }
 
 const remove = (req, res) => {
-    productCreateAdpter.factory().remove();
+    productFactory().remove();
     res.send('Birds home page');
 }
 

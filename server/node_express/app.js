@@ -26,4 +26,8 @@ app.use(productRoutes);
 
 app.listen(4321, () => console.log("ESM em com @std/esm"));
 
+process.on('uncaughtException', function (err) {
+    console.log(err);
+}); 
+
 export default app;

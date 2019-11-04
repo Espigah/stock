@@ -1,10 +1,13 @@
-export default {
-    url: 'mongodb://localhost:27017/product',
-    adpter: "MONGO"
-}
+const argv = require('yargs').argv;
+const path = require('path');
 
 
-// export default {
-//     url: 'postgres://john:pass123@localhost:5432/products',
-//     adpter: "POSTGRES"
-// }
+let configPath = argv.config || process.env.CONFIG || './adapters.config.json';
+console.log("configPath", configPath)
+
+const configs = require(configPath).filter(config=>config.enabled)
+console.log("configs", configs)
+
+
+
+export default configs;

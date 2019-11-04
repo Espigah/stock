@@ -8,7 +8,7 @@ import {
 
 import sinon from "sinon"
 
-import create from '../product.adapter';
+import create from './product.adapter';
 
 
 

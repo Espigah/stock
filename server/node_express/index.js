@@ -1,6 +1,5 @@
-import database from './src/database/database';
+import database from './src/database/databaseFactory';
 import databaseConfig from './database.config';
 
-//database.connect(databaseConfig.url);
 
 import app from './app';

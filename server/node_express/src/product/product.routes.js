@@ -17,13 +17,13 @@ router.post('/', create);
 // Retrieve all Products
 router.get('/', findAll);
 
-// Retrieve a single Product with productId
-router.get('/:id', findOne);
+// Retrieve a single Product with id
+//router.get('/:id', findOne);
 
-// Update a Product with productId
+// Update a Product with id
 router.put('/:id', update);
 
-// Delete a Product with productId
+// Delete a Product with id
 router.delete('/:id', remove);
 
 

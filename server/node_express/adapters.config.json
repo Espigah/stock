@@ -1,0 +1,26 @@
+[{
+        "url": "redis://127.0.0.1:6379",
+        "adapter": "REDIS",
+        "enabled": true
+    },
+    {
+        "url": "mongodb://localhost:27017/products",
+        "adapter": "MONGO",
+        "enabled": true
+    },
+    {
+        "url": "postgres://john:pass123@localhost:5432/products",
+        "adapter": "POSTGRES",
+        "enabled": false
+    },
+    {
+        "url": "http://localhost:3000/products",
+        "adapter": "JSON_SERVER",
+        "enabled": false
+    },
+    {
+        "url": "http://localhost:5984/products",
+        "adapter": "COUCH",
+        "enabled": true
+    }
+]
