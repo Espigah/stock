@@ -1,0 +1,3 @@
+FROM couchdb:2.3.1  
+
+EXPOSE 5984
