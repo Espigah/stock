@@ -10,7 +10,7 @@ const exec = (name, func, ...args) => {
             return {
                 name: name,
                 status: 200,
-                timestemp: Date.now() - t1,
+                timestamp: Date.now() - t1,
                 data: data,
                 success: true
             }
@@ -20,7 +20,7 @@ const exec = (name, func, ...args) => {
             return {
                 name: name,
                 status: 500,
-                timestemp: Date.now() - t1,
+                timestamp: Date.now() - t1,
                 data: err,
                 success: false
             }
